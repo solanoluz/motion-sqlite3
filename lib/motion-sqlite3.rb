@@ -10,6 +10,9 @@ Motion::Project::App.setup do |app|
     app.files.unshift(file)
   end
 
-  app.libs << "/usr/lib/libsqlite3.dylib"
-  app.include "sqlite3.h"
+  # Commenting here because of an obscure issue with MapKit.
+  # We will have to load this inside the project to make Sqlite3 work.
+  #
+  # app.libs << "/usr/lib/libsqlite3.dylib"
+  # app.include "sqlite3.h"
 end
